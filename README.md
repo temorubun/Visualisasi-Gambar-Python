@@ -7,9 +7,16 @@ Proyek ini berisi contoh-contoh visualisasi gambar menggunakan Python, matplotli
 ### 1. Grayscale
 #### Visualisasi Gambar Grayscale dengan Skala 0–255
 Membuat gambar grayscale 8x8 piksel dengan gradasi dari hitam (0) ke putih (255). Setiap piksel direpresentasikan oleh satu nilai antara 0-255, di mana:
-- 0 = Hitam pekat
-- 255 = Putih terang
-- Nilai di antaranya menunjukkan tingkat keabuan
+- 0 = Hitam pekat (0% putih)
+- 32 = Abu-abu sangat gelap (12.5% putih)
+- 64 = Abu-abu gelap (25% putih)
+- 96 = Abu-abu agak gelap (37.5% putih)
+- 128 = Abu-abu sedang (50% putih)
+- 160 = Abu-abu agak terang (62.5% putih)
+- 192 = Abu-abu terang (75% putih)
+- 255 = Putih terang (100% putih)
+
+Setiap baris dalam gambar menunjukkan gradasi yang sama dari kiri ke kanan, menciptakan efek transisi halus dari hitam ke putih.
 
 Ukuran gambar: 8x8 piksel
 Format output: PNG (6x6 inci)
@@ -17,14 +24,14 @@ Format output: PNG (6x6 inci)
 ```python
 # Buat gambar grayscale sederhana 8x8
 grayscale_image = np.array([
-    [0, 32, 64, 96, 128, 160, 192, 255],
-    [0, 32, 64, 96, 128, 160, 192, 255],
-    [0, 32, 64, 96, 128, 160, 192, 255],
-    [0, 32, 64, 96, 128, 160, 192, 255],
-    [0, 32, 64, 96, 128, 160, 192, 255],
-    [0, 32, 64, 96, 128, 160, 192, 255],
-    [0, 32, 64, 96, 128, 160, 192, 255],
-    [0, 32, 64, 96, 128, 160, 192, 255]
+    [0, 32, 64, 96, 128, 160, 192, 255],  
+    [0, 32, 64, 96, 128, 160, 192, 255],  
+    [0, 32, 64, 96, 128, 160, 192, 255],  
+    [0, 32, 64, 96, 128, 160, 192, 255],  
+    [0, 32, 64, 96, 128, 160, 192, 255],  
+    [0, 32, 64, 96, 128, 160, 192, 255],  
+    [0, 32, 64, 96, 128, 160, 192, 255],  
+    [0, 32, 64, 96, 128, 160, 192, 255]  
 ], dtype=np.uint8)
 ```
 
