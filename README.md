@@ -2,25 +2,17 @@
 
 Proyek ini berisi contoh-contoh visualisasi gambar menggunakan Python, matplotlib, dan numpy.
 
-## Struktur Proyek
-
-```
-project/
-├── requirements.txt      # Dependensi proyek
-├── src/                 # Kode sumber
-│   ├── grayscale/      # Visualisasi gambar grayscale
-│   └── rgb/            # Visualisasi gambar RGB
-├── output/             # Hasil output gambar
-│   ├── grayscale/     # Output gambar grayscale
-│   └── rgb/           # Output gambar RGB
-└── README.md          # Dokumentasi proyek
-```
-
 ## Contoh Visualisasi
 
 ### 1. Grayscale
 #### Visualisasi Gambar Grayscale dengan Skala 0–255
-Membuat gambar grayscale 8x8 dengan gradasi dari hitam (0) ke putih (255).
+Membuat gambar grayscale 8x8 piksel dengan gradasi dari hitam (0) ke putih (255). Setiap piksel direpresentasikan oleh satu nilai antara 0-255, di mana:
+- 0 = Hitam pekat
+- 255 = Putih terang
+- Nilai di antaranya menunjukkan tingkat keabuan
+
+Ukuran gambar: 8x8 piksel
+Format output: PNG (6x6 inci)
 
 ```python
 # Buat gambar grayscale sederhana 8x8
@@ -43,7 +35,13 @@ Hasil visualisasi:
 ### 2. RGB
 
 #### a. Visualisasi Gradasi Warna RGB
-Membuat pola warna RGB 8x8 dengan berbagai kombinasi nilai R, G, dan B.
+Membuat pola warna RGB 8x8 piksel dengan berbagai kombinasi nilai R, G, dan B. Setiap piksel memiliki 3 channel warna:
+- R (Red): 0-255
+- G (Green): 0-255
+- B (Blue): 0-255
+
+Ukuran gambar: 8x8 piksel
+Format output: PNG (6x6 inci)
 
 ```python
 # Contoh baris pertama dari gambar RGB
@@ -71,7 +69,6 @@ rgb_image = np.array([
     [[255, 0, 255], [255, 0, 192], [255, 0, 128], [255, 0, 64], [255, 0, 0], [255, 64, 0], [255, 128, 0], [255, 192, 0]],
     [[255, 255, 0], [192, 255, 0], [128, 255, 0], [64, 255, 0], [0, 255, 0], [0, 255, 64], [0, 255, 128], [0, 255, 192]]
 ], dtype=np.uint8)
-
 ```
 
 Hasil visualisasi:
@@ -79,7 +76,14 @@ Hasil visualisasi:
 ![Visualisasi RGB Scale](src/rgb/output/rgb/rgb_scale.png)
 
 #### b. Contoh Gambar RGB: Ikon Kucing
-Membuat ikon kucing sederhana menggunakan kombinasi warna RGB.
+Membuat ikon kucing sederhana menggunakan kombinasi warna RGB dalam ukuran 8x8 piksel. Setiap piksel menggunakan kombinasi warna:
+- Putih: [255, 255, 255] untuk background
+- Hitam: [0, 0, 0] untuk kontur/garis
+- Pink: [255, 192, 203] untuk telinga
+- Hot Pink: [255, 105, 180] untuk hidung
+
+Ukuran gambar: 8x8 piksel
+Format output: PNG (6x6 inci)
 
 ```python
 # Warna yang digunakan
@@ -132,6 +136,6 @@ Hasil visualisasi:
    ```
 
 3. Hasil visualisasi akan disimpan di folder `output/` masing-masing direktori:
-   - Grayscale: `src/grayscale/output/grayscale/grayscale_scale.png`
-   - RGB Scale: `src/rgb/output/rgb/rgb_scale.png`
-   - RGB Cat: `src/rgb/output/rgb/rgb_cat.png` 
+   - Grayscale: `src/grayscale/output/grayscale/grayscale_scale.png` (8x8 piksel, 6x6 inci)
+   - RGB Scale: `src/rgb/output/rgb/rgb_scale.png` (8x8 piksel, 6x6 inci)
+   - RGB Cat: `src/rgb/output/rgb/rgb_cat.png` (8x8 piksel, 6x6 inci) 
